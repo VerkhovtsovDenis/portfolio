@@ -1,0 +1,119 @@
+html, body {
+	font-famiLy: 'Arial'; 
+	margin: 0;
+	padding: 0;	I
+	height: 100%;
+	width: 100%;
+}
+a {
+	coLor: #0059b2; 
+	text-decoration: none;
+} 
+
+a:hover {
+	coLor: #CC0000;
+	text-decoration: underline;
+}
+
+.clear {dear: both;}
+
+ul.mainmenu {
+	list-styLe: none;
+	background: #3F4137;
+	height: 60px;
+	margin: 0;
+	padding: 0;
+	coLor: #fdc073;
+	font-size: 20px;
+	overflow: hidden;
+
+}
+
+ul.mainmenu li{
+	float: left;
+	margin: 18px 40px 0 50px;
+}
+
+ul.mainmenu li.last {float: right;}
+
+ul.mainmenu li a{
+	color: #fdc073;
+	text-decoration: none;
+}
+
+ul.mainmenu li a: hover {
+	color: #fda83d;
+}
+
+div.content{
+	margin: 10px;
+}
+
+.form-contact lable{
+	display: inline-block;
+	min-width: 80px;
+}
+
+.form-contact p{ margin: 10px 0 px 10px 0;}
+.form-contact input[type=submit], textarea{
+	font-size: 16px;
+}
+
+.form-contact .invalid{
+    background: #ff9898;
+}
+
+.form-contact .invalid-feedback{
+    color: #cc0000;
+}
+
+
+.flash {padding: 10px;}
+
+.flash.success {
+	border: 1px solid #21db56;
+    background: #aeffc5;
+}
+
+.flash.error {
+	border: 1px solid #ff4343;
+    background: #ff9c9c;
+}
+
+.flash.success {
+	border: 1px solid #21db56;
+    background: #aeffc5;
+}
+
+.flash.info {
+	border: 1px solid #02315e;
+    background: #8caec9;
+}
+
+table{
+    width: 300px; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    margin: 10px 10px 10px 10px;
+}
+th, td{
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+}
+
+table tr:nth-child(odd) {
+    background-color: #FFFFFF;/* фон нечетных строк */
+}
+
+tr:nth-child(even) {
+    background-color: #B8D7EA ;/* фон четных строк */
+}
+
+tr:hover td{
+    background: #84C2EA;/* фон строки при наведении */
+
+  }
+
+
+th {
+    background: #2E74A2; /* Цвет первого заглловка */
+}
