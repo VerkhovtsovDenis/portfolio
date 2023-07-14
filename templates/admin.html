@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{cat}}">{{ msg }}</div>
+{% endfor %}
+
+<h3>Привет, {{ user.lastName }}!</h3>
+
+<h2><p>Содержимое страницы "Админ":</p></h2>
+
+<h3>Информация о пользователях:</h3>
+
+<table>
+        <tr>
+                <th>ID</th>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Отчество</th>
+                <th>Почта</th>
+                <th>Дата регистрации</th>
+                <th>Роль</th>
+                <th>Навыки</th>
+                <th>Изменить</th>
+                <th>Удалить</th>
+        </tr>
+
+
+        {% for user, role, skills, edit, delete in tables['Users_and_Role']%}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.fatherName }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.date }}</td>
+            <td>{{ role }}</td>
+            <td>
+                <ul>
+                    {% for skill in skills %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td><a href="">{{edit}}</a></td>
+            <td><a href="">{{delete}}</a></td>
+
+        </tr>
+        {% endfor %}
+
+</table>
+<a href="{{url_for('logout')}}">Выйти из системы</a>
+
+{% endblock %}

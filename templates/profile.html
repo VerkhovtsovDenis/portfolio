@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{cat}}">{{ msg }}</div>
+{% endfor %}
+
+<h3>Привет, {{ user.lastName }}!</h3>
+
+<h2><p>Содержимое страницы "Профиль":</p></h2>
+
+<h3>Информация о пользователе:</h3>
+<table>
+        <tr><td>Фамилия: </td><td>{{ user.firstName }}</td></tr>
+        <tr><td>Имя: </td><td>{{ user.lastName }}</td></tr>
+        <tr><td>Отчество: </td><td>{{ user.fatherName }}</td></tr>
+        <tr><td>Почта: </td><td>{{ user.email }}</td></tr>
+        <tr><td>Дата регистрации: </td><td>{{ user.date }}</td></tr>
+</table>
+
+<a href="{{url_for('logout')}}">Выйти из системы</a>
+
+{% endblock %}
