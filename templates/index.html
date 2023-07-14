@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Greethngs</title>
-</head>
-<body>
-    <h3>Hello, user!</h3>
-    <p>Enter your login and password</p>
+{% extends 'base.html' %}
 
-    <form method="post" action="/sing_in">
-        <label for="username">username:</label>
-        <input type="text" name="username"><br>
-        <label for="password:">password:</label>
-        <input type="text" name="password"><br>
-        <button type="submit">Sing in</button>
-    </form>
-
-    {% if error %}
-    <p color="red">{{error}}</p>
-    {% endif %}
-
-    <a href="{{url_for('main')}}">MainPage</a>
-</body>
-</html>
+{% block content %}
+{{ super() }}
+<p>Содержимое главной страницы</p>
+{% endblock %}
